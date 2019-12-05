@@ -26,7 +26,7 @@ git checkout --orphan gh-pages
 ```
 vim _config.yml
 
-# 文件内容
+#文件内容
 baseurl: /xxx.github.io
 ```
 
