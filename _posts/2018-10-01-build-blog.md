@@ -3,7 +3,7 @@
 　title: 如何创建在github上建blog
 ---
 
-## {{ page.title }}
+## {{ title }}
 
 0. 安装git，申请[github账户](https://github.io)
 
