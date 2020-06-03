@@ -23,7 +23,6 @@ title: 如何创建在github上建blog
   ```
 
 2. 创建设置文件
-
    ```
    vim _config.yml
 
@@ -32,7 +31,6 @@ title: 如何创建在github上建blog
    ```
 
 3. 创建模板文件
-
    ```
    mkdir _layouts
    ```
@@ -45,7 +43,6 @@ title: 如何创建在github上建blog
 
 
 6. 发布内容
-
   提交内容到本地仓库
   ```
   git add .
@@ -57,9 +54,7 @@ title: 如何创建在github上建blog
   ```
 
 7. 编辑内容
-
   新增或修改文章后，将修改内容提交到github即可。
-
   ```
   git add .
   git commit -m "message"
