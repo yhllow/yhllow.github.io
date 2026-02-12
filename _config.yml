@@ -1,1 +1,3 @@
-baseurl: /
+#设置CNAME需要设置为/
+#baseurl: /
+baseurl: /yhllow.github.io
