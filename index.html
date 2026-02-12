@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>年化收益率计算器</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .calculator-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+        
+        @media (min-width: 992px) {
+            .calculator-wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .input-section {
+            padding: 35px;
+            background: #f8fafc;
+        }
+        
+        .result-section {
+            padding: 35px;
+            background: white;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e8ecef;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            font-size: 1.2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        
+        .form-label .unit {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e6ed;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #4b6cb7;
+            box-shadow: 0 0 0 3px rgba(75, 108, 183, 0.15);
+        }
+        
+        .form-input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .date-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .date-group input {
+            flex: 1;
+        }
+        
+        .calc-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .calc-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(75, 108, 183, 0.3);
+        }
+        
+        /* 结果卡片样式 */
+        .result-main {
+            background: linear-gradient(135deg, #f8fafc 0%, #e8ecef 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .result-title {
+            font-size: 1.2rem;
+            color: #5a6c7d;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .result-value {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .result-subtitle {
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+        
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .result-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e8ecef;
+        }
+        
+        .card-title {
+            font-size: 0.95rem;
+            color: #5a6c7d;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .card-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .card-unit {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        /* 收益对比样式 */
+        .comparison-section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+        
+        .comparison-title {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .comparison-item {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .comparison-label {
+            font-size: 0.95rem;
+            color: #5a6c7d;
+            margin-bottom: 8px;
+        }
+        
+        .comparison-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        /* 进度条样式 */
+        .progress-section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .progress-item {
+            margin-bottom: 20px;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #5a6c7d;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background: #e8ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            border-radius: 5px;
+            transition: width 1s ease-out;
+        }
+        
+        /* 数值颜色 */
+        .positive {
+            color: #27ae60;
+        }
+        
+        .negative {
+            color: #e74c3c;
+        }
+        
+        .neutral {
+            color: #7f8c8d;
+        }
+        
+        /* 信息提示 */
+        .info-text {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 8px;
+        }
+        
+        .error-message {
+            background: #fee;
+            color: #e74c3c;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .result-value {
+                font-size: 2.5rem;
+            }
+            
+            .card-value {
+                font-size: 1.5rem;
+            }
+            
+            .comparison-number {
+                font-size: 1.5rem;
+            }
+            
+            .input-section, .result-section {
+                padding: 25px;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #e8ecef;
+            margin-top: 20px;
+        }
+        
+        /* 自定义选择器样式 */
+        select.form-input {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237f8c8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+            padding-right: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <header>
+                <div class="header-content">
+                    <h1>年化收益率计算器</h1>
+                    <p class="subtitle">精确计算您的投资回报，支持单利/复利计算，自动计算投资期限，提供详细收益分析</p>
+                </div>
+            </header>
+            
+            <div class="calculator-wrapper">
+                <!-- 输入区域 -->
+                <section class="input-section">
+                    <h2 class="section-title">📊 投资参数</h2>
+                    
+                    <div class="form-group">
+                        <div class="form-label">
+                            <span>投资本金</span>
+                            <span class="unit">元</span>
+                        </div>
+                        <input type="number" class="form-input" v-model="principal" placeholder="请输入投资本金" step="0.01" min="0">
+                        <p class="info-text">初始投入的资金金额</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-label">
+                            <span>最终金额</span>
+                            <span class="unit">元</span>
+                        </div>
+                        <input type="number" class="form-input" v-model="finalAmount" placeholder="请输入最终金额" step="0.01" min="0">
+                        <p class="info-text">投资到期后的总金额</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-label">
+                            <span>持仓收益</span>
+                            <span class="unit">元</span>
+                        </div>
+                        <input type="number" class="form-input" v-model="profit" placeholder="请输入持仓收益" step="0.01">
+                        <p class="info-text">投资期间获得的总收益</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-label">
+                            <span>投资期限</span>
+                        </div>
+                        <div class="form-input-group">
+                            <input type="number" class="form-input" v-model="periodValue" placeholder="输入期限" min="1" step="1">
+                            <select class="form-input" v-model="periodUnit">
+                                <option value="days">天</option>
+                                <option value="months">月</option>
+                                <option value="years">年</option>
+                            </select>
+                        </div>
+                        <p class="info-text">或选择买入日期自动计算</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-label">
+                            <span>买入日期</span>
+                        </div>
+                        <div class="date-group">
+                            <input type="date" class="form-input" v-model="startDate">
+                            <button class="calc-btn" @click="calculateFromDate" style="padding: 0 20px; width: auto;">计算天数</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="form-label">
+                            <span>计算方式</span>
+                        </div>
+                        <div class="form-input-group">
+                            <select class="form-input" v-model="compoundType">
+                                <option value="simple">单利计算</option>
+                                <option value="compound">复利计算</option>
+                            </select>
+                            <select class="form-input" v-model="compoundFrequency" v-if="compoundType === 'compound'">
+                                <option value="daily">日复利</option>
+                                <option value="monthly">月复利</option>
+                                <option value="quarterly">季复利</option>
+                                <option value="yearly">年复利</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="calc-btn" @click="calculate">开始计算</button>
+                    
+                    <div v-if="error" class="error-message">
+                        ⚠️ {{ error }}
+                    </div>
+                </section>
+                
+                <!-- 结果输出区域 -->
+                <section class="result-section">
+                    <h2 class="section-title">📈 计算结果</h2>
+                    
+                    <!-- 主要结果 -->
+                    <div class="result-main">
+                        <div class="result-title">年化收益率</div>
+                        <div class="result-value" :class="getReturnColor(annualizedReturn)">
+                            {{ formatNumber(annualizedReturn, 2) }}%
+                        </div>
+                        <div class="result-subtitle">您的投资年化回报率</div>
+                    </div>
+                    
+                    <!-- 关键指标网格 -->
+                    <div class="result-grid">
+                        <div class="result-card">
+                            <div class="card-title">💰 投资本金</div>
+                            <div class="card-value">¥{{ formatNumber(principal) }}</div>
+                            <div class="card-unit">初始投入资金</div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="card-title">📅 投资期限</div>
+                            <div class="card-value">{{ investmentYears.toFixed(2) }}</div>
+                            <div class="card-unit">年</div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="card-title">💹 总收益</div>
+                            <div class="card-value" :class="getProfitColor(profit)">
+                                {{ profit >= 0 ? '+' : '' }}¥{{ formatNumber(profit) }}
+                            </div>
+                            <div class="card-unit">投资期间总收益</div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="card-title">🏦 最终金额</div>
+                            <div class="card-value">¥{{ formatNumber(finalAmount) }}</div>
+                            <div class="card-unit">到期可获得金额</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 收益对比 -->
+                    <div class="comparison-section">
+                        <div class="comparison-title">⚖️ 收益对比</div>
+                        <div class="comparison-grid">
+                            <div class="comparison-item">
+                                <div class="comparison-label">单利总收益</div>
+                                <div class="comparison-number" :class="getProfitColor(simpleInterest)">
+                                    {{ simpleInterest >= 0 ? '+' : '' }}¥{{ formatNumber(simpleInterest) }}
+                                </div>
+                            </div>
+                            
+                            <div class="comparison-item">
+                                <div class="comparison-label">复利总收益</div>
+                                <div class="comparison-number" :class="getProfitColor(compoundInterest)">
+                                    {{ compoundInterest >= 0 ? '+' : '' }}¥{{ formatNumber(compoundInterest) }}
+                                </div>
+                            </div>
+                            
+                            <div class="comparison-item">
+                                <div class="comparison-label">单利年化收益</div>
+                                <div class="comparison-number" :class="getReturnColor(simpleAnnualReturn)">
+                                    {{ formatNumber(simpleAnnualReturn, 2) }}%
+                                </div>
+                            </div>
+                            
+                            <div class="comparison-item">
+                                <div class="comparison-label">复利年化收益</div>
+                                <div class="comparison-number" :class="getReturnColor(compoundAnnualReturn)">
+                                    {{ formatNumber(compoundAnnualReturn, 2) }}%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 收益明细 -->
+                    <div class="progress-section">
+                        <div class="comparison-title">📊 收益分析</div>
+                        
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>总收益率</span>
+                                <span>{{ formatNumber(totalReturnRate, 2) }}%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" :style="{ width: Math.min(Math.abs(totalReturnRate), 100) + '%' }"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="result-grid" style="margin-top: 20px;">
+                            <div class="result-card">
+                                <div class="card-title">📅 日均收益</div>
+                                <div class="card-value" :class="getProfitColor(dailyProfit)">
+                                    {{ dailyProfit >= 0 ? '+' : '' }}¥{{ formatNumber(dailyProfit) }}
+                                </div>
+                                <div class="card-unit">平均每天收益</div>
+                            </div>
+                            
+                            <div class="result-card">
+                                <div class="card-title">📈 月均收益</div>
+                                <div class="card-value" :class="getProfitColor(monthlyProfit)">
+                                    {{ monthlyProfit >= 0 ? '+' : '' }}¥{{ formatNumber(monthlyProfit) }}
+                                </div>
+                                <div class="card-unit">平均每月收益</div>
+                            </div>
+                            
+                            <div class="result-card">
+                                <div class="card-title">📋 总投资天数</div>
+                                <div class="card-value">{{ investmentDays }}</div>
+                                <div class="card-unit">天</div>
+                            </div>
+                            
+                            <div class="result-card">
+                                <div class="card-title">💼 计算方式</div>
+                                <div class="card-value">{{ compoundType === 'simple' ? '单利' : '复利' }}</div>
+                                <div class="card-unit">{{ compoundType === 'compound' ? compoundFrequencyMap[compoundFrequency] : '' }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <footer>
+                <p>© 2025 年化收益率计算器 | 数据仅供参考，投资有风险，决策需谨慎</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const { createApp, ref, computed, watch } = Vue;
+        
+        // 获取数字的小数位数
+        function getDecimalLength(num) {
+            const str = num.toString();
+            const decimalIndex = str.indexOf('.');
+            return decimalIndex === -1 ? 0 : str.length - decimalIndex - 1;
+        }
+
+        // 加法：转换为整数计算以避免精度问题
+        function preciseAdd(a, b) {
+            const multiplier = Math.pow(10, Math.max(getDecimalLength(a), getDecimalLength(b)));
+            return (a * multiplier + b * multiplier) / multiplier;
+        }
+
+        // 减法：转换为整数计算
+        function preciseSubtract(a, b) {
+            const multiplier = Math.pow(10, Math.max(getDecimalLength(a), getDecimalLength(b)));
+            return (a * multiplier - b * multiplier) / multiplier;
+        }
+
+        // 乘法：转换为整数计算
+        function preciseMultiply(a, b) {
+            const aDecimalLen = getDecimalLength(a);
+            const bDecimalLen = getDecimalLength(b);
+            const multiplier = Math.pow(10, aDecimalLen + bDecimalLen);
+            return (a * Math.pow(10, aDecimalLen)) * (b * Math.pow(10, bDecimalLen)) / multiplier;
+        }
+
+        // 除法：转换为整数计算
+        function preciseDivide(a, b) {
+            const aDecimalLen = getDecimalLength(a);
+            const bDecimalLen = getDecimalLength(b);
+            const multiplier = Math.pow(10, aDecimalLen - bDecimalLen);
+            return (a * Math.pow(10, aDecimalLen)) / (b * Math.pow(10, bDecimalLen)) / multiplier;
+        }
+
+        createApp({
+            setup() {
+                // 响应式数据
+                const principal = ref(10000);
+                const finalAmount = ref(15000);
+                const profit = ref(5000);
+                const periodValue = ref(365);
+                const periodUnit = ref('days');
+                const startDate = ref('');
+                const compoundType = ref('compound');
+                const compoundFrequency = ref('yearly');
+                const error = ref('');
+                
+                // 复利频率映射
+                const compoundFrequencyMap = {
+                    daily: '日复利',
+                    monthly: '月复利',
+                    quarterly: '季复利',
+                    yearly: '年复利'
+                };
+                
+                // 计算投资天数
+                const investmentDays = computed(() => {
+                    if (periodUnit.value === 'days') {
+                        return parseFloat(periodValue.value) || 0;
+                    } else if (periodUnit.value === 'months') {
+                        return (parseFloat(periodValue.value) || 0) * 30;
+                    } else {
+                        return (parseFloat(periodValue.value) || 0) * 365;
+                    }
+                });
+                
+                // 计算投资年数
+                const investmentYears = computed(() => {
+                    const days = investmentDays.value;
+                    return days > 0 ? days / 365 : 0;
+                });
+                
+                // 计算年化收益率
+                const annualizedReturn = computed(() => {
+                    const p = parseFloat(principal.value) || 0;
+                    const f = parseFloat(finalAmount.value) || 0;
+                    const years = investmentYears.value;
+                    
+                    if (p <= 0 || f <= 0 || years <= 0) {
+                        return 0;
+                    }
+                    
+                    if (compoundType.value === 'simple') {
+                        // 单利计算：年化收益率 = (总收益率) / 投资年数
+                        return ((f / p - 1) / years * 100);
+                    } else {
+                        // 复利计算：年化收益率 = ((最终金额/本金)^(1/投资年数) - 1) × 100%
+                        return (Math.pow(f / p, 1 / years) - 1) * 100;
+                    }
+                });
+                
+                // 计算总收益率
+                const totalReturnRate = computed(() => {
+                    const p = parseFloat(principal.value) || 0;
+                    const f = parseFloat(finalAmount.value) || 0;
+                    
+                    if (p <= 0) return 0;
+                    return ((f - p) / p * 100);
+                });
+                
+                // 计算日均收益
+                const dailyProfit = computed(() => {
+                    const p = profit.value || 0;
+                    const days = investmentDays.value;
+                    
+                    if (days <= 0) return 0;
+                    return p / days;
+                });
+                
+                // 计算月均收益
+                const monthlyProfit = computed(() => {
+                    const p = profit.value || 0;
+                    const years = investmentYears.value;
+                    
+                    if (years <= 0) return 0;
+                    return p / (years * 12);
+                });
+                
+                // 计算单利收益
+                const simpleInterest = computed(() => {
+                    const p = parseFloat(principal.value) || 0;
+                    const years = investmentYears.value;
+                    const rate = parseFloat(annualizedReturn.value) / 100 || 0;
+                    
+                    return p * rate * years;
+                });
+                
+                // 计算复利收益
+                const compoundInterest = computed(() => {
+                    const p = parseFloat(principal.value) || 0;
+                    const years = investmentYears.value;
+                    const rate = parseFloat(annualizedReturn.value) / 100 || 0;
+                    
+                    return p * Math.pow(1 + rate, years) - p;
+                });
+                
+                // 计算单利年化收益率
+                const simpleAnnualReturn = computed(() => {
+                    const p = parseFloat(principal.value) || 0;
+                    const f = parseFloat(finalAmount.value) || 0;
+                    const years = investmentYears.value;
+                    
+                    if (p <= 0 || f <= 0 || years <= 0) {
+                        return 0;
+                    }
+                    
+                    return ((f / p - 1) / years * 100);
+                });
+                
+                // 计算复利年化收益率
+                const compoundAnnualReturn = computed(() => {
+                    const p = parseFloat(principal.value) || 0;
+                    const f = parseFloat(finalAmount.value) || 0;
+                    const years = investmentYears.value;
+                    
+                    if (p <= 0 || f <= 0 || years <= 0) {
+                        return 0;
+                    }
+                    
+                    return (Math.pow(f / p, 1 / years) - 1) * 100;
+                });
+                
+                // 格式化为数字
+                const formatNumber = (num, decimals = 2) => {
+                    if (num === undefined || num === null || isNaN(num)) {
+                        return '0.00';
+                    }
+                    
+                    const n = parseFloat(num);
+                    if (n === 0) return '0.00';
+                    
+                    return n.toLocaleString('zh-CN', {
+                        minimumFractionDigits: decimals,
+                        maximumFractionDigits: decimals
+                    });
+                };
+                
+                // 根据日期计算投资天数
+                const calculateFromDate = () => {
+                    if (!startDate.value) {
+                        error.value = '请选择买入日期';
+                        return;
+                    }
+                    
+                    const start = new Date(startDate.value);
+                    const today = new Date();
+                    
+                    // 计算天数差
+                    const diffTime = Math.abs(today - start);
+                    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                    
+                    periodValue.value = diffDays;
+                    periodUnit.value = 'days';
+                    error.value = '';
+                };
+                
+                // 计算函数
+                const calculate = () => {
+                    // 验证输入
+                    const p = parseFloat(principal.value);
+                    const f = parseFloat(finalAmount.value);
+                    
+                    if (!p || p <= 0) {
+                        error.value = '请输入有效的投资本金（大于0）';
+                        return;
+                    }
+                    
+                    if (!f || f <= 0) {
+                        error.value = '请输入有效的最终金额（大于0）';
+                        return;
+                    }
+                    
+                    if (investmentDays.value <= 0) {
+                        error.value = '投资期限必须大于0';
+                        return;
+                    }
+                    
+                    error.value = '';
+                };
+                
+                // 获取收益颜色
+                const getProfitColor = (value) => {
+                    const num = parseFloat(value) || 0;
+                    return num >= 0 ? 'positive' : 'negative';
+                };
+                
+                // 获取收益率颜色
+                const getReturnColor = (value) => {
+                    const num = parseFloat(value) || 0;
+                    if (num > 10) return 'positive';
+                    if (num > 5) return 'neutral';
+                    if (num > 0) return 'positive';
+                    if (num < 0) return 'negative';
+                    return 'neutral';
+                };
+                
+                // 监听数据变化，自动计算
+                watch([principal, finalAmount], ([newPrincipal, newFinalAmount]) => {
+                    const p = parseFloat(newPrincipal) || 0;
+                    const f = parseFloat(newFinalAmount) || 0;
+                    
+                    if (p > 0 && f > 0) {
+                        profit.value = preciseSubtract(f, p);
+                    }
+                });
+                
+                watch([finalAmount, profit], ([newFinalAmount, newProfit]) => {
+                    const f = parseFloat(newFinalAmount) || 0;
+                    const profitVal = parseFloat(newProfit) || 0;
+                    
+                    if (f > 0) {
+                        principal.value = preciseSubtract(f, profitVal);
+                    }
+                });
+                
+                // watch([principal, profit], ([newPrincipal, newProfit]) => {
+                //     const p = parseFloat(newPrincipal) || 0;
+                //     const profitVal = parseFloat(newProfit) || 0;
+                    
+                //     if (p > 0) {
+                //         finalAmount.value = (p + profitVal);
+                //     }
+                // });
+                
+                // 设置默认日期为一年前
+                const setDefaultDate = () => {
+                    const oneYearAgo = new Date();
+                    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+                    
+                    const year = oneYearAgo.getFullYear();
+                    const month = String(oneYearAgo.getMonth() + 1).padStart(2, '0');
+                    const day = String(oneYearAgo.getDate()).padStart(2, '0');
+                    
+                    startDate.value = `${year}-${month}-${day}`;
+                };
+                
+                // 初始化默认日期
+                setDefaultDate();
+                
+                // 初始计算
+                calculate();
+                
+                return {
+                    principal,
+                    finalAmount,
+                    profit,
+                    periodValue,
+                    periodUnit,
+                    startDate,
+                    compoundType,
+                    compoundFrequency,
+                    error,
+                    investmentDays,
+                    investmentYears,
+                    annualizedReturn,
+                    totalReturnRate,
+                    dailyProfit,
+                    monthlyProfit,
+                    simpleInterest,
+                    compoundInterest,
+                    simpleAnnualReturn,
+                    compoundAnnualReturn,
+                    compoundFrequencyMap,
+                    formatNumber,
+                    calculateFromDate,
+                    calculate,
+                    getProfitColor,
+                    getReturnColor
+                };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
