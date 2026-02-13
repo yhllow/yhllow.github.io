@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>年化收益率计算器</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/decimal.js@10.6.0/decimal.js"></script>
     <style>
         * {
             margin: 0;
@@ -601,41 +602,6 @@
 
     <script>
         const { createApp, ref, computed, watch } = Vue;
-        
-        // 获取数字的小数位数
-        function getDecimalLength(num) {
-            const str = num.toString();
-            const decimalIndex = str.indexOf('.');
-            return decimalIndex === -1 ? 0 : str.length - decimalIndex - 1;
-        }
-
-        // 加法：转换为整数计算以避免精度问题
-        function preciseAdd(a, b) {
-            const multiplier = Math.pow(10, Math.max(getDecimalLength(a), getDecimalLength(b)));
-            return (a * multiplier + b * multiplier) / multiplier;
-        }
-
-        // 减法：转换为整数计算
-        function preciseSubtract(a, b) {
-            const multiplier = Math.pow(10, Math.max(getDecimalLength(a), getDecimalLength(b)));
-            return (a * multiplier - b * multiplier) / multiplier;
-        }
-
-        // 乘法：转换为整数计算
-        function preciseMultiply(a, b) {
-            const aDecimalLen = getDecimalLength(a);
-            const bDecimalLen = getDecimalLength(b);
-            const multiplier = Math.pow(10, aDecimalLen + bDecimalLen);
-            return (a * Math.pow(10, aDecimalLen)) * (b * Math.pow(10, bDecimalLen)) / multiplier;
-        }
-
-        // 除法：转换为整数计算
-        function preciseDivide(a, b) {
-            const aDecimalLen = getDecimalLength(a);
-            const bDecimalLen = getDecimalLength(b);
-            const multiplier = Math.pow(10, aDecimalLen - bDecimalLen);
-            return (a * Math.pow(10, aDecimalLen)) / (b * Math.pow(10, bDecimalLen)) / multiplier;
-        }
 
         createApp({
             setup() {
@@ -841,32 +807,23 @@
                 
                 // 监听数据变化，自动计算
                 watch([principal, finalAmount], ([newPrincipal, newFinalAmount]) => {
-                    const p = parseFloat(newPrincipal) || 0;
-                    const f = parseFloat(newFinalAmount) || 0;
+                    const p = new Decimal(parseFloat(newPrincipal) || 0);
+                    const f = new Decimal(parseFloat(newFinalAmount) || 0);
                     
                     if (p > 0 && f > 0) {
-                        profit.value = preciseSubtract(f, p);
+                        profit.value = f.minus(p).toNumber();
                     }
                 });
                 
                 watch([finalAmount, profit], ([newFinalAmount, newProfit]) => {
-                    const f = parseFloat(newFinalAmount) || 0;
-                    const profitVal = parseFloat(newProfit) || 0;
+                    const f = new Decimal(parseFloat(newFinalAmount) || 0);
+                    const profitVal = new Decimal(parseFloat(newProfit) || 0);
                     
                     if (f > 0) {
-                        principal.value = preciseSubtract(f, profitVal);
+                        principal.value = f.minus(profitVal).toNumber();
                     }
                 });
-                
-                // watch([principal, profit], ([newPrincipal, newProfit]) => {
-                //     const p = parseFloat(newPrincipal) || 0;
-                //     const profitVal = parseFloat(newProfit) || 0;
-                    
-                //     if (p > 0) {
-                //         finalAmount.value = (p + profitVal);
-                //     }
-                // });
-                
+
                 // 设置默认日期为一年前
                 const setDefaultDate = () => {
                     const oneYearAgo = new Date();
