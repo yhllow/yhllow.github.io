@@ -1,0 +1,625 @@
+{
+	"spider": "http://cdn.qiaoji8.com/fix251212.jar;md5;31542aefeb80f62c8c7c9d1d5e0a6036",
+	"wallpaper": "https://bing.img.run/uhd.php",
+	"lives": [
+		{
+			"name": "📺电视节目",
+			"type": 0,
+			"url": "https://git.yinheng.eu.org/raw/cat.git/master/my!live.png",
+			"timeout": 10
+		},
+		{
+			"name": "📺电视直播",
+			"type": 0,
+			"url": "https://git.yinheng.eu.org/raw/cat.git/master/my!live.m3u",
+			"timeout": 10
+		},
+		{
+			"name": "📺青龙电视",
+			"type": 0,
+			"url": "https://gitee.com/yiwu369/6758/raw/master/6988.png",
+			"epg": "https://diyp20.112114.xyz",
+			"timeout": 10
+		},
+		{
+			"name": "📺裤佬直播",
+			"type": 0,
+			"url": "https://ghfast.top/https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg1",
+			"timeout": 10
+		}
+	],
+	"sites": [
+		{
+			"key": "天天",
+			"name": "天天┃高峰期用不了就点我换源或者搜索",
+			"type": 3,
+			"api": "csp_TTian",
+			"playerType": 2,
+			"ext": "7lj763gg0939791h1l3888jig44gi291li"
+		},
+		{
+			"key": "拾光",
+			"name": "拾光┃秒播APP",
+			"type": 3,
+			"api": "csp_Hmys",
+			"playerType": 1,
+			"ext": "https://dy.jmzp.net.cn"
+		},
+		{
+			"key": "csp_xlys",
+			"name": "修罗┃无搜索",
+			"type": 3,
+			"api": "csp_Bdys01",
+			"searchable": 1,
+			"playerType": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"ext": "7lj763gg402i7942476492jlg94li29kk6gi8448ij"
+		},
+		{
+			"key": "剧评",
+			"name": "剧评┃App",
+			"type": 3,
+			"api": "csp_Jpys",
+			"playerType": 1,
+			"ext": "7lj763gg402i7942463j9j9jh8579590k3hjii5gi4i73l2k5l"
+		},
+		{
+			"key": "巧技二",
+			"name": "巧技┃仅搜索",
+			"type": 3,
+			"api": "csp_qiao2",
+			"playerType": 2,
+			"ext": "7lj763gg402i7942412h849jg1558j9jl8g19213il86316k465719lik158491h179312h4934183ig2l05g9"
+		},
+		{
+			"key": "巧技五",
+			"name": "巧技五┃仅搜索",
+			"type": 3,
+			"api": "csp_qiao2",
+			"playerType": 2,
+			"ext": "7lj763gg402i7942412h849jg1558j9jl8g19213il86316k465719lik158491h179312hk935886ig2l05g9"
+		},
+		{
+			"key": "yunyun",
+			"name": "云云┃无搜索",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg402i79425h2384j4g949j899hll9990i9kjl6l740h1342hjlg1848401g8610h9995i998j351gl38kklkj1hkhll757010k7hji6h377ih37k060g35161jhl3i5h0l2702g7299452l4297k5697g5390lk6935k2i9g48l8j2kh27l1g014k7j9475g8"
+		},
+		{
+			"key": "lanyingys",
+			"name": "橘子4K┃APP",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg402i79425h3l90jgh14i9ijik6h8i75lj8i73l2l4k6g48lhgl2k4j3j2kik7l83gj54h687390196j0lkgg21l1i3552i7ij087ijj9258721g03lll"
+		},
+		{
+			"key": "kafeiys",
+			"name": "狂风┃APP",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg402i7942522l99jhh90ljii5g1l09i13i39g2l6i514l56l1li1k5107159113h6945h8g91351kgkijl5l315g8l3656756kjk699gj689125k773g94i16ghg596l5l022202ki910690ii5kh4i6724k0g83g70k09hgkj3jj7hl431480l3i3197"
+		},
+		{
+			"key": "huomaoys",
+			"name": "火猫┃App",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg402i7942553k9hj9k1128h95g3l8920j828g332i08154lg0h6134l040hj849gl8i4k9881381lh48ig2g41il4k131270lk1h6j7l723863llg60l91544k9k693l1g7722664ii126k"
+		},
+		{
+			"key": "yizys",
+			"name": "驿站┃无搜索",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg402i794240208hi3g05l8181higgi609i7i73l224k141jg1lh405k0g49i60kh6ih53i6ji6g01k885g4lk4lk2l432240jk5k1igg97kj421g03lll"
+		},
+		{
+			"key": "主角",
+			"name": "主角┃APP",
+			"type": 3,
+			"api": "csp_Muou",
+			"playerType": 2,
+			"ext": "7lj763gg402i794247258k9jh6598585l3g6ij13il8g20g9qiaoji8j9i9k1g3k90h7i507i213k5j602"
+		},
+		{
+			"key": "柚子",
+			"name": "柚子┃APP",
+			"type": 3,
+			"api": "csp_Xdai",
+			"playerType": 2,
+			"ext": "7lj763gg402i7942553393i9g44g8j82k2g9jg54ih863325555955g5g1595i1741i70lk1i00hji87320gh6j1gkkg0jh4g8697h06ghh3jhl5339731hj7hh5595ilkkkjhh8k261236896432i458hkk4i756kh5k3773jl2j8gj958228h178060g6h72j974g8k1"
+		},
+		{
+			"key": "永夜",
+			"name": "永夜┃App",
+			"type": 3,
+			"api": "csp_Xdai",
+			"playerType": 2,
+			"ext": "7lj763gg0939790i413gjh9kk011jijiggll990k9li73l224k770ik0j10l502j2j9l798lhj778hh33g018h94k5j400kij3567j7gji97kkk4118421g03lll"
+		},
+		{
+			"key": "趣看",
+			"name": "趣看┃无搜索",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg0939795l007hi482k508i2i0g0k69h089lj36579051707k0li150k1g0gil50gk9342i193620lg49lk5l91gh2k4712j53ljh9jhgk31ji2lkg73lk1j12"
+		},
+		{
+			"key": "星河",
+			"name": "星河┃App",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg0939795i007ki485k612jli3hil9990l96j86i79025j08k7l8055g1h1i834kg3i900i0j06k4hg190k2lj0gk6k567614jl0k399gl72j06hkl3ilj1l"
+		},
+		{
+			"key": "时常",
+			"name": "时常┃无搜索",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg0939791i5820839jhg498h93ljh9i353ihi73l2k5l5j48g4l21j035j01850ig6i904998l6j09g1j0g1l712hlg37g670ll5k39jl62jj329kl3ilj1l"
+		},
+		{
+			"key": "巧技三",
+			"name": "巧技三┃QD4K",
+			"type": 3,
+			"api": "csp_qiao2",
+			"playerType": 2,
+			"ext": "7lj763gg402i7942412h849jg1558j9jl8g19213il86316k465719lik158491h179312gl815890ig2l05g9"
+		},
+		{
+			"key": "优质",
+			"name": "优质┃App",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg402i7942433293i0g9458881hig7j94k818g326i51491kljlk134k401g9g54gk8j5i9097751kh28kh9kj11kjl92k6046l0gkj8l630892glj67g61h48g3kjiigkg0263k6h955430429ill43307gk8k0602hh09lh0j6jh7h"
+		},
+		{
+			"key": "客星",
+			"name": "客星┃App",
+			"type": 3,
+			"api": "csp_Xdai",
+			"playerType": 2,
+			"ext": "7lj763gg0939790i413gi486k509jgi3ggk6j244j6j36j76041707h0lk124l0l0h867j83h576h3j66h4lk89lh5lh1jl3l170647kj09lklji74j56lg673li1h16"
+		},
+		{
+			"key": "蝴蝶",
+			"name": "蝴蝶┃App",
+			"type": 3,
+			"api": "csp_Qiji",
+			"playerType": 2,
+			"ext": "7lj763gg402i79425h2384j4g949j899hll9990i9kjl6l740h1342hjlg1848401g8610h9995i998j351gl38kklkj1hkhll757010k7hji6h377ih37k060g35161jhl3i5h0l2702g7299452l4297k5697g5390lk6935k2i9g48l8j2kh27l1g014k7j9677gg"
+		},
+		{
+			"key": "柠檬",
+			"name": "柠檬┃App",
+			"type": 3,
+			"api": "csp_Nmvod",
+			"playerType": 2,
+			"ext": "7lj763gg402i7942503g839jg74h8h88highi40799jh6i6k454419l0l5184k0g549h0kg2i01i838i2h42g891lgg1"
+		},
+		{
+			"key": "AI2",
+			"name": "AI2┃仅搜索",
+			"type": 3,
+			"api": "csp_AI",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"playerType": 2,
+			"ext": "7lj763gg402i79425725929jg94l9884l3k6i952i1i63j315h0l0hlhk9584h1i148054h39j1j858h3l52g1gkl9k611khli613h0hggk28hh4118i33l760hg5k00j4i382l3g6397223jl75355hi4g313266gk7gk2767i7jkhi898k1kg46g341g7h2k9074gllj18k007i702541920h953j5j110279543l1784hgl7404j0l7587k163641565665ki03j79kh61i609j0728hg6g17lk1gji3127l6523jl3565868gk1j0j"
+		},
+		{
+			"key": "AI3",
+			"name": "AI3┃仅搜索",
+			"type": 3,
+			"api": "csp_AI",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"playerType": 2,
+			"ext": "7lj763gg0939795i037ki481k20ki2i3g3lk840883843k6k5l4354k0k10k48411g8654l9885g83ih2h0lh295lll81jg8k66l7011l8hji0l432912jhi3hk3140kghkhj3ghl7782871"
+		},
+		{
+			"key": "Dygang",
+			"name": "电影港[边下边播]",
+			"type": 3,
+			"api": "csp_Dygang",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0
+		},
+		{
+			"key": "Lib",
+			"name": "Lib┃直连",
+			"type": 3,
+			"api": "csp_Lib",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"ext": "7lj763gg402i7942463j9j9jhi558k84lhg7845kili62l35535512l0h61j48410h9g5igk9j40908h351hh484h8l60h"
+		},
+		{
+			"key": "NoSearch_csp_DiDuan",
+			"name": "低端┃无搜索",
+			"type": 3,
+			"api": "csp_Ddrk",
+			"searchable": 1,
+			"playerType": 2,
+			"quickSearch": 1,
+			"filterable": 0
+		},
+		{
+			"key": "快看",
+			"name": "快看┃直连",
+			"type": 3,
+			"api": "csp_Kuaikan",
+			"searchable": 1,
+			"playerType": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "360_spider",
+			"name": "360┃解析",
+			"api": "csp_SP360",
+			"type": 3,
+			"filterable": 1,
+			"quickSearch": 1,
+			"searchable": 1,
+			"playerType": 2,
+			"ext": ""
+		},
+		{
+			"key": "ZXZJ",
+			"name": "在线┃直连",
+			"api": "csp_Zxzj",
+			"type": 3,
+			"filterable": 1,
+			"quickSearch": 1,
+			"searchable": 1,
+			"playerType": 2,
+			"ext": "7lj763gg402i7942463j9j9jgg449698khhh845ki38473"
+		},
+		{
+			"key": "csp_CZSPP",
+			"name": "厂长┃直连",
+			"type": 3,
+			"api": "csp_Czsapp",
+			"searchable": 1,
+			"playerType": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"ext": "7lj763gg402i7942463j9j9jh346968hg5ll845ki38473"
+		},
+		{
+			"key": "csp_sbb",
+			"name": "布布┃直连",
+			"type": 3,
+			"api": "csp_Czsapp",
+			"searchable": 1,
+			"playerType": 1,
+			"quickSearch": 1,
+			"filterable": 0,
+			"ext": "7lj763gg402i7942463j9j9jg3498k93lhggih54828g332i1j"
+		},
+		{
+			"key": "csp_Auete",
+			"name": "Auete┃无搜索",
+			"type": 3,
+			"api": "csp_Auete",
+			"searchable": 1,
+			"playerType": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "NoSearch_csp_BBB",
+			"name": "哔哩哔哩",
+			"type": 3,
+			"api": "csp_Bili",
+			"searchable": 1,
+			"quickSearch": 0,
+			"filterable": 1,
+			"ext": "7lj763gg402i7942463j9j9jg1558j9jl8g19213il86316k465719lik1585907179l13hj8h5j9j"
+		},
+		{
+			"key": "push_agent",
+			"name": "推送",
+			"type": 3,
+			"api": "csp_PushAgent",
+			"searchable": 0,
+			"quickSearch": 0,
+			"filterable": 0,
+			"ext": "6666666666666666"
+		}
+	],
+	"parses": [
+		{
+			"name": "解析聚合",
+			"type": 3,
+			"url": "Demo"
+		},
+		{
+			"name": "Json轮询",
+			"type": 2,
+			"url": "Sequence"
+		},
+		{
+			"name": "巧技",
+			"type": 1,
+			"url": "https://zy.qiaoji8.com/neibu.php?url=",
+			"ext": {
+				"flag": [
+					"qq",
+					"腾讯",
+					"qiyi",
+					"爱奇艺",
+					"奇艺",
+					"youku",
+					"优酷",
+					"sohu",
+					"搜狐",
+					"letv",
+					"乐视",
+					"mgtv",
+					"芒果",
+					"tnmb",
+					"seven",
+					"bilibili"
+				],
+				"header": {
+					"User-Agent": "okhttp/4.9.1"
+				}
+			}
+		},
+		{
+			"name": "巧技二",
+			"type": 1,
+			"url": "https://zy.qiaoji8.com/gouzi.php?url=",
+			"ext": {
+				"flag": [
+					"qq",
+					"腾讯",
+					"qiyi",
+					"爱奇艺",
+					"奇艺",
+					"youku",
+					"优酷",
+					"sohu",
+					"搜狐",
+					"letv",
+					"乐视",
+					"mgtv",
+					"芒果",
+					"tnmb",
+					"seven",
+					"bilibili",
+					"1905",
+					"NetFilx"
+				],
+				"header": {
+					"User-Agent": "okhttp/4.9.1"
+				}
+			}
+		},
+		{
+			"name": "巧技三",
+			"type": 1,
+			"url": "https://zy.qiaoji8.com/xiafan.php?url=",
+			"ext": {
+				"flag": [
+					"QD4K",
+					"iyf",
+					"duanju",
+					"gzcj",
+					"GTV",
+					"GZYS",
+					"weggz",
+					"Ace"
+				],
+				"header": {
+					"User-Agent": "okhttp/4.9.1"
+				}
+			}
+		}
+	],
+	"flags": [
+		"youku",
+		"qq",
+		"QQ",
+		"iqiyi",
+		"qiyi",
+		"letv",
+		"sohu",
+		"pptv",
+		"PPTV",
+		"mgtv",
+		"wasu",
+		"bilibili",
+		"m1905",
+		"seven",
+		"m78",
+		"mtv",
+		"sjs",
+		"dbs",
+		"yds",
+		"HNB",
+		"JL4K"
+	],
+	"ijk": [
+		{
+			"group": "软解码",
+			"options": [
+				{
+					"category": 4,
+					"name": "opensles",
+					"value": "0"
+				},
+				{
+					"category": 4,
+					"name": "overlay-format",
+					"value": "842225234"
+				},
+				{
+					"category": 4,
+					"name": "framedrop",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "soundtouch",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "start-on-prepared",
+					"value": "1"
+				},
+				{
+					"category": 1,
+					"name": "http-detect-range-support",
+					"value": "0"
+				},
+				{
+					"category": 1,
+					"name": "fflags",
+					"value": "fastseek"
+				},
+				{
+					"category": 2,
+					"name": "skip_loop_filter",
+					"value": "48"
+				},
+				{
+					"category": 4,
+					"name": "reconnect",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "enable-accurate-seek",
+					"value": "0"
+				},
+				{
+					"category": 4,
+					"name": "mediacodec",
+					"value": "0"
+				},
+				{
+					"category": 4,
+					"name": "mediacodec-auto-rotate",
+					"value": "0"
+				},
+				{
+					"category": 4,
+					"name": "mediacodec-handle-resolution-change",
+					"value": "0"
+				},
+				{
+					"category": 4,
+					"name": "mediacodec-hevc",
+					"value": "0"
+				},
+				{
+					"category": 1,
+					"name": "dns_cache_timeout",
+					"value": "600000000"
+				}
+			]
+		},
+		{
+			"group": "硬解码",
+			"options": [
+				{
+					"category": 4,
+					"name": "opensles",
+					"value": "0"
+				},
+				{
+					"category": 4,
+					"name": "overlay-format",
+					"value": "842225234"
+				},
+				{
+					"category": 4,
+					"name": "framedrop",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "soundtouch",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "start-on-prepared",
+					"value": "1"
+				},
+				{
+					"category": 1,
+					"name": "http-detect-range-support",
+					"value": "0"
+				},
+				{
+					"category": 1,
+					"name": "fflags",
+					"value": "fastseek"
+				},
+				{
+					"category": 2,
+					"name": "skip_loop_filter",
+					"value": "48"
+				},
+				{
+					"category": 4,
+					"name": "reconnect",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "enable-accurate-seek",
+					"value": "0"
+				},
+				{
+					"category": 4,
+					"name": "mediacodec",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "mediacodec-auto-rotate",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "mediacodec-handle-resolution-change",
+					"value": "1"
+				},
+				{
+					"category": 4,
+					"name": "mediacodec-hevc",
+					"value": "1"
+				},
+				{
+					"category": 1,
+					"name": "dns_cache_timeout",
+					"value": "600000000"
+				}
+			]
+		}
+	],
+	"ads": [
+		"43.248.128.138"
+	]
+}
