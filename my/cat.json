@@ -5,13 +5,13 @@
 		{
 			"name": "📺电视节目",
 			"type": 0,
-			"url": "https://git.yinheng.eu.org/raw/cat.git/master/my!live.png",
+			"url": "https://yhllow.github.io/my/live.png",
 			"timeout": 10
 		},
 		{
 			"name": "📺电视直播",
 			"type": 0,
-			"url": "https://git.yinheng.eu.org/raw/cat.git/master/my!live.m3u",
+			"url": "https://yhllow.github.io/my/live.m3u",
 			"timeout": 10
 		},
 		{
