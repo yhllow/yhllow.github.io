@@ -5,48 +5,84 @@
 			"name": "🚀推荐┃自用线路"
 		},
 		{
-			"url": "http://我不是.摸鱼儿.com",
-			"name": "🚀多多┃摸鱼线路"
+			"name": "俊佬在线",
+			"url": "http://home.jundie.top:81/top98.json"
 		},
 		{
-			"url": "http://cdn.qiaoji8.com/tvbox.json",
-			"name": "💎多多┃巧技线路"
+			"name": "短剧频道",
+			"url": "http://box.ufuzi.com/tv/qq/短剧频道/api.json"
 		},
 		{
-			"url": "https://gitee.com/yiwu369/6758/raw/master/1.json",
-			"name": "🐹多多┃青龙线路"
+			"name": "牛二线路",
+			"url": "https://9280.kstore.space/wex.json"
 		},
 		{
-			"url": "http://www.meowtv.vip/tvbox.json",
-			"name": "🐹多多┃喵影视线路"
+			"name": "少儿频道",
+			"url": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer"
 		},
 		{
-			"url": "https://yydsys.top/duo",
-			"name": "🐹多多┃多多线路"
+			"name": "心魔在线",
+			"url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json"
 		},
 		{
-			"url": "http://www.饭太硬.com/tv",
-			"name": "🐹多多┃饭太硬线路"
+			"name": "王二小（新）",
+			"url": "https://9280.kstore.vip/newwex.json"
 		},
 		{
-			"url": "http://xhztv.top/4k.json",
-			"name": "小盒子4K"
+			"name": "小马线路",
+			"url": "https://szyyds.cn/tv/x.json"
 		},
 		{
-			"url": "http://xhztv.top/xhz",
-			"name": "小盒子单仓"
-		},		
+			"name": "嗷呜备用",
+			"url": "https://9763.kstore.vip/aowu.json"
+		},
 		{
-			"url": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
-			"name": "南风无广"
-		},		
+			"name": "无意云",
+			"url": "https://ym.wya6.cn/"
+		},
 		{
-			"url": "https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
-			"name": "香雅情"
-		},		
+			"name": "月光宝盒源",
+			"url": "https://3043.kstore.space/bhvip/bh/box.json"
+		},
 		{
-			"url": "http://box.ufuzi.com/tv/qq/短剧频道/api.json",
-			"name": "短剧频道"
+			"name": "宝盒线路2026",
+			"url": "https://3043.kstore.space/bhvip/bh/bh2.json"
+		},
+		{
+			"name": "小盒子4K",
+			"url": "http://xhztv.top/4k.json"
+		},
+		{
+			"name": "高天流云",
+			"url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"
+		},
+		{
+			"name": "饭太硬",
+			"url": "http://fty.xxooo.cf/tv"
+		},
+		{
+			"name": "金鱼box接口",
+			"url": "http://mzrjk.top/VIP"
+		},
+		{
+			"name": "宝盒备用",
+			"url": "https://gh-proxy.com/https://raw.githubusercontent.com/guot55/yg/main/pg/bh.json"
+		},
+		{
+			"name": "饭太硬4",
+			"url": "http://fty.888484.xyz/tv"
+		},
+		{
+			"name": "南风线路",
+			"url": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json"
+		},
+		{
+			"name": "zhangqun1818",
+			"url": "http://zhangqun1818.serv00.net/zq/api.json"
+		},
+		{
+			"name": "香雅晴线",
+			"url": "https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"
 		}
 	]
 }
