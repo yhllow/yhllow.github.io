@@ -1,60 +1,95 @@
-📺央卫频道,#genre#,DE=3
-CCTV-1,http://120.234.187.66:10086/udp/239.10.0.114:1025 $广东移动
-CCTV-2,http://120.234.187.66:10086/udp/239.10.0.207:1025 $广东移动
-CCTV-3,http://120.234.187.66:10086/udp/239.10.0.101:1025 $广东移动
-CCTV-4,http://120.234.187.66:10086/udp/239.10.0.245:1025 $广东移动
-CCTV-5,http://120.234.187.66:10086/udp/239.10.0.102:1025 $广东移动
-CCTV-5+,http://120.234.187.66:10086/udp/239.10.0.213:1025 $广东移动
-CCTV-6,http://120.234.187.66:10086/udp/239.10.0.103:1025 $广东移动
-CCTV-7,http://120.234.187.66:10086/udp/239.10.0.208:1025 $广东移动
-CCTV-8,http://120.234.187.66:10086/udp/239.10.0.104:1025 $广东移动
-CCTV-9,http://120.234.187.66:10086/udp/239.10.0.209:1025 $广东移动
-CCTV-10,http://120.234.187.66:10086/udp/239.10.0.210:1025 $广东移动
-CCTV-11,http://120.234.187.66:10086/udp/239.11.0.24:1025 $广东移动
-CCTV-12,http://120.234.187.66:10086/udp/239.10.0.211:1025 $广东移动
-CCTV-13,http://120.234.187.66:10086/udp/239.10.0.198:1025 $广东移动
-CCTV-14,http://120.234.187.66:10086/udp/239.10.0.212:1025 $广东移动
-CCTV-15,http://120.234.187.66:10086/udp/239.11.0.25:1025 $广东移动
-CCTV-16,http://120.234.187.66:10086/udp/239.11.0.126:1025 $广东移动
-CCTV-17,http://120.234.187.66:10086/udp/239.10.0.244:1025 $广东移动
-广东卫视,http://120.234.187.66:10086/udp/239.10.0.111:1025 $广东移动
-大湾区卫视,http://120.234.187.66:10086/udp/239.11.0.78:1025 $广东移动
-湖南卫视,http://120.234.187.66:10086/udp/239.10.0.115:1025 $广东移动
-浙江卫视,http://120.234.187.66:10086/udp/239.10.0.179:1025 $广东移动
-江苏卫视,http://120.234.187.66:10086/udp/239.10.0.180:1025 $广东移动
-北京卫视,http://120.234.187.66:10086/udp/239.10.0.131:1025 $广东移动
-深圳卫视,http://120.234.187.66:10086/udp/239.10.0.132:1025 $广东移动
-黑龙江卫视,http://120.234.187.66:10086/udp/239.10.0.133:1025 $广东移动
-湖北卫视,http://120.234.187.66:10086/udp/239.10.0.134:1025 $广东移动
-天津卫视,http://120.234.187.66:10086/udp/239.10.0.181:1025 $广东移动
-山东卫视,http://120.234.187.66:10086/udp/239.10.0.182:1025 $广东移动
-东方卫视,http://120.234.187.66:10086/udp/239.10.0.183:1025 $广东移动
-辽宁卫视,http://120.234.187.66:10086/udp/239.10.0.185:1025 $广东移动
-四川卫视,http://120.234.187.66:10086/udp/239.10.0.204:1025 $广东移动
-重庆卫视,http://120.234.187.66:10086/udp/239.10.0.205:1025 $广东移动
-安徽卫视,http://120.234.187.66:10086/udp/239.10.0.203:1025 $广东移动
-贵州卫视,http://120.234.187.66:10086/udp/239.10.0.222:1025 $广东移动
-东南卫视,http://120.234.187.66:10086/udp/239.10.0.77:1025 $广东移动
-河北卫视,http://120.234.187.66:10086/udp/239.10.0.79:1025 $广东移动
-江西卫视,http://120.234.187.66:10086/udp/239.10.0.80:1025 $广东移动
-吉林卫视,http://120.234.187.66:10086/udp/239.10.0.81:1025 $广东移动
-广西卫视,http://120.234.187.66:10086/udp/239.10.0.246:1025 $广东移动
-甘肃卫视,http://120.234.187.66:10086/udp/239.11.0.175:1025 $广东移动
-河南卫视,http://120.234.187.66:10086/udp/239.11.0.94:1025 $广东移动
-云南卫视,http://120.234.187.66:10086/udp/239.11.0.171:1025 $广东移动
-海南卫视,http://120.234.187.66:10086/udp/239.11.0.172:1025 $广东移动
-三沙卫视,http://120.234.187.66:10086/udp/239.11.0.177:1025 $广东移动
-青海卫视,http://120.234.187.66:10086/udp/239.11.0.179:1025 $广东移动
-广东卫视,http://120.234.187.66:10086/udp/239.10.0.45:1025 $广东移动
-山东卫视,http://120.234.187.66:10086/udp/239.10.0.56:1025 $广东移动
+📺央视,#genre#
+CCTV1,http://173.208.212.130:8181/720p/cctv1.m3u8
+CCTV1,http://139.227.221.147:9901/tsfile/live/0001_1.m3u8?key=txiptv
+CCTV2,http://173.208.212.130:8181/720p/cctv2.m3u8
+CCTV2,http://139.227.221.147:9901/tsfile/live/0002_1.m3u8?key=txiptv
+CCTV3,http://173.208.212.130:8181/720p/cctv3.m3u8
+CCTV3,http://139.227.221.147:9901/tsfile/live/0003_1.m3u8?key=txiptv
+CCTV4,http://173.208.212.130:8181/720p/cctv4.m3u8
+CCTV4,http://139.227.221.147:9901/tsfile/live/0004_1.m3u8?key=txiptv
+CCTV4亚洲,http://173.208.212.130:8181/720p/cctv4.m3u8
+CCTV4亚洲,http://139.227.221.147:9901/tsfile/live/0004_1.m3u8?key=txiptv
+CCTV5,http://173.208.212.130:8181/720p/cctv5.m3u8
+CCTV5,http://139.227.221.147:9901/tsfile/live/0005_1.m3u8?key=txiptv
+CCTV5+,http://173.208.212.130:8181/720p/cctv5p.m3u8
+CCTV6,http://173.208.212.130:8181/720p/cctv6.m3u8
+CCTV6,http://139.227.221.147:9901/tsfile/live/0006_1.m3u8?key=txiptv
+CCTV7,http://173.208.212.130:8181/720p/cctv7.m3u8
+CCTV7,http://139.227.221.147:9901/tsfile/live/0007_1.m3u8?key=txiptv
+CCTV8,http://173.208.212.130:8181/720p/cctv8.m3u8
+CCTV8,http://139.227.221.147:9901/tsfile/live/0008_1.m3u8?key=txiptv
+CCTV9,http://173.208.212.130:8181/720p/cctv9.m3u8
+CCTV9,http://139.227.221.147:9901/tsfile/live/0009_1.m3u8?key=txiptv
+CCTV10,http://173.208.212.130:8181/720p/cctv10.m3u8
+CCTV10,http://139.227.221.147:9901/tsfile/live/0010_1.m3u8?key=txiptv
+CCTV11,http://173.208.212.130:8181/720p/cctv11.m3u8
+CCTV11,http://139.227.221.147:9901/tsfile/live/0011_1.m3u8?key=txiptv
+CCTV12,http://173.208.212.130:8181/720p/cctv12.m3u8
+CCTV12,http://139.227.221.147:9901/tsfile/live/0012_1.m3u8?key=txiptv
+CCTV13,http://173.208.212.130:8181/720p/cctv13.m3u8
+CCTV13,http://139.227.221.147:9901/tsfile/live/0013_1.m3u8?key=txiptv
+CCTV14,http://173.208.212.130:8181/720p/cctv14.m3u8
+CCTV14,http://139.227.221.147:9901/tsfile/live/0014_1.m3u8?key=txiptv
+CCTV15,http://173.208.212.130:8181/720p/cctv15.m3u8
+CCTV15,http://139.227.221.147:9901/tsfile/live/0015_1.m3u8?key=txiptv
+CCTV16,http://173.208.212.130:8181/720p/cctv16.m3u8
+CCTV17,http://173.208.212.130:8181/720p/cctv17.m3u8
+CCTV第一剧场,http://173.208.212.130:8181/720p/dyjc.m3u8
+CCTV风云剧场,http://173.208.212.130:8181/720p/fyjc.m3u8
+CCTV风云音乐,http://173.208.212.130:8181/720p/fyyy.m3u8
+CCTV风云足球,http://173.208.212.130:8181/720p/fyzq.m3u8
+CCTV怀旧剧场,http://173.208.212.130:8181/720p/hjjc.m3u8
+CCTV女性时尚,http://173.208.212.130:8181/720p/nxss.m3u8
+CCTV世界地理,http://173.208.212.130:8181/720p/sjdl.m3u8
+CCTV卫生健康,http://173.208.212.130:8181/720p/wsjk.m3u8
+CCTV央视文化精品,http://173.208.212.130:8181/720p/ysjp.m3u8
+CCTV央视台球,http://173.208.212.130:8181/720p/ystq.m3u8
+
+📺卫视,#genre#
+安徽卫视,http://173.208.212.130:8181/720p/ahws.m3u8
+安徽卫视,http://139.227.221.147:9901/tsfile/live/0130_1.m3u8?key=txiptv
+北京卫视,http://173.208.212.130:8181/720p/bjws.m3u8
+北京卫视,http://139.227.221.147:9901/tsfile/live/0122_1.m3u8?key=txiptv
+重庆卫视,http://139.227.221.147:9901/tsfile/live/0142_1.m3u8?key=txiptv
+东方卫视,http://173.208.212.130:8181/720p/dfws.m3u8
+东方卫视,http://139.227.221.147:9901/tsfile/live/0107_1.m3u8?key=txiptv
+东南卫视,http://139.227.221.147:9901/tsfile/live/0137_1.m3u8?key=txiptv
+广东卫视,http://173.208.212.130:8181/720p/gdws.m3u8
+广东卫视,http://139.227.221.147:9901/tsfile/live/0125_1.m3u8?key=txiptv
+河北卫视,http://173.208.212.130:8181/720p/hews.m3u8
+河北卫视,http://139.227.221.147:9901/tsfile/live/0117_1.m3u8?key=txiptv
+河南卫视,http://173.208.212.130:8181/720p/haws.m3u8
+湖北卫视,http://139.227.221.147:9901/tsfile/live/0132_1.m3u8?key=txiptv
+湖南卫视,http://173.208.212.130:8181/720p/hnws.m3u8
+湖南卫视,http://139.227.221.147:9901/tsfile/live/0128_1.m3u8?key=txiptv
+江苏卫视,http://173.208.212.130:8181/720p/jsws.m3u8
+江苏卫视,http://139.227.221.147:9901/tsfile/live/0127_1.m3u8?key=txiptv
+辽宁卫视,http://139.227.221.147:9901/tsfile/live/0121_1.m3u8?key=txiptv
+山东卫视,http://173.208.212.130:8181/720p/sdws.m3u8
+山东卫视,http://139.227.221.147:9901/tsfile/live/0131_1.m3u8?key=txiptv
+深圳卫视,http://173.208.212.130:8181/720p/szws.m3u8
+深圳卫视,http://139.227.221.147:9901/tsfile/live/0126_1.m3u8?key=txiptv
+天津卫视,http://173.208.212.130:8181/720p/tjws.m3u8
+天津卫视,http://139.227.221.147:9901/tsfile/live/0135_1.m3u8?key=txiptv
+浙江卫视,http://173.208.212.130:8181/720p/zjws.m3u8
+浙江卫视,http://139.227.221.147:9901/tsfile/live/0124_1.m3u8?key=txiptv
+旅游卫视,http://139.227.221.147:9901/tsfile/live/0114_1.m3u8?key=txiptv
 
 
 ♨️电影,#genre#
-周星星,https://live.ottiptv.cc/huya/11342412
+周星驰,https://live.ottiptv.cc/huya/11342412
+周星驰,http://107.150.60.122/live/lbzxc.m3u8
 成龙,https://live.ottiptv.cc/huya/11342386
+成龙,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbcl
+成龙,http://107.150.60.122/live/lbcl.m3u8
 林正英,https://live.ottiptv.cc/huya/11342421
+林正英,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hylzy
+林正英,http://107.150.60.122/live/lblzy.m3u8
 李茶的姑妈,https://live.ottiptv.cc/huya/880261
-宝盒资源,https://raw.giteeusercontent.com/baohe2025/bh/raw/master/bh.mp4
+陈翔六点半,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hycxldb
+邵氏1,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbsswx
+邵氏2,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbssdz
+邵氏3,http://63.141.230.178:82/gslb/zbdq5.m3u8?id=lbssxj
 王晶,https://live.ottiptv.cc/huya/11602058
 贺岁档,https://live.ottiptv.cc/huya/11601986
 春节喜剧,https://live.ottiptv.cc/huya/11352897
@@ -217,6 +252,24 @@ RM跑男,https://live.ottiptv.cc/huya/11336725
 于谦吴京何猷君,https://live.ottiptv.cc/huya/29982647
 offer1,https://live.ottiptv.cc/huya/30080237
 还我瓢瓢拳,https://live.ottiptv.cc/huya/21059578
+
+♨️春晚,#genre#
+春晚1987,https://txmov2.a.kwimgs.com/bs3/video-hls/5195746663405928031_hlsb.m3u8
+春晚1988,https://txmov2.a.kwimgs.com/bs3/video-hls/5216575810935394655_hlsb.m3u8
+春晚1989,https://txmov2.a.kwimgs.com/bs3/video-hls/5194620763762726260_hlsb.m3u8
+春晚1990,https://cdn8.yzzy-online.com/20220704/597_e0d90c37/1000k/hls/index.m3u8
+春晚1992,https://txmov2.a.kwimgs.com/bs3/video-hls/5256826755663896297_hlshd15.m3u8
+春晚1997,https://txmov2.a.kwimgs.com/bs3/video-hls/5230649583590411879_hlshd15.m3u8
+春晚1998,https://txmov2.a.kwimgs.com/bs3/video-hls/5225864507896315430_hlshd15.m3u8
+春晚2008,https://txmov2.a.kwimgs.com/bs3/video-hls/5210946337266019890_hlshd15.m3u8
+春晚2011,https://txmov2.a.kwimgs.com/bs3/video-hls/5243597434070590481_hlshd15.m3u8
+春晚2012,https://cdn8.yzzy-online.com/20220704/591_82b72f82/1000k/hls/index.m3u8
+春晚2016,https://cdn8.yzzy-online.com/20220704/577_cda9c8d1/1000k/hls/index.m3u8
+春晚2023,https://txmov2.a.kwimgs.com/bs3/video-hls/5251197255879398624_hlshd15.m3u8
+春晚2024,https://p2.bdstatic.com/rtmp.liveshow.lss-user.baidubce.com/live/stream_bduid_6488563992_8982723413/merged_1707497046297_88536_25144_41936.m3u8
+春晚2025,https://res.cctvnews.cctv.com/video/3005/record/cctv/merge1/133396667284143308839013005/8fbd6180bdef4da19f6155cf6b4652e1-4.m3u8
+春晚2025,https://svip.high24-playback.com/20250129/17159_7bca93c4/2000k/hls/mixed.m3u8
+春晚2025,https://svipsvip.ffzyread1.com/20250129/35458_c988286f/index.m3u8
 
 ♨️虎牙,#genre#
 电影_发哥,https://live.ottiptv.cc/huya/11342387
